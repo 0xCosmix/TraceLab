@@ -1,5 +1,7 @@
 package net.cosmix.tracelab;
 
+import net.cosmix.tracelab.item.ModItemGroups;
+import net.cosmix.tracelab.item.Moditems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -13,7 +15,10 @@ public class TraceLab implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemsGroups();
+		Moditems.registerModItems();
+
+
 	}
 
 	public static Identifier id(String path) {
