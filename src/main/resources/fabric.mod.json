@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "tracelab",
+	"version": "${version}",
+	"name": "TraceLab",
+	"description": "TraceLab è una mod per Minecraft dedicata all’investigazione forense e alla ricostruzione delle scene del crimine. Introduce strumenti per la raccolta e l’analisi di prove come DNA, impronte digitali, sangue e tracce biologiche. Progettata per server RP e gameplay investigativo, permette ai giocatori di ricostruire eventi criminali attraverso un sistema realistico di evidenze, laboratorio e analisi scientifiche. Nessun NPC: tutto nasce dalle azioni dei giocatori.",
+	"authors": [
+		"Cosmix2313"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tracelab/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cosmix.tracelab.TraceLab"
+		],
+		"client": [
+			"net.cosmix.tracelab.TraceLabClient"
+		],
+		"fabric-datagen": [
+			"net.cosmix.tracelab.TraceLabDataGenerator"
+		]
+	},
+	"mixins": [
+		"tracelab.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
